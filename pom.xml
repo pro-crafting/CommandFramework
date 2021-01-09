@@ -11,6 +11,13 @@
 	<artifactId>commandframework</artifactId>
 	<version>0.2.0-SNAPSHOT</version>
 
+	<scm>
+		<connection>scm:git@github.com:pro-crafting/CommandFramework.git</connection>
+		<url>https://github.com/pro-crafting/CommandFramework</url>
+		<developerConnection>scm:git:git@github.com:pro-crafting/CommandFramework.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
 	<properties>
 		<version.spigot-api>1.14.4-R0.1-SNAPSHOT</version.spigot-api>
 	</properties>
