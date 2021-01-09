@@ -1,4 +1,4 @@
-package de.pro_crafting.commandframework;
+package com.pro_crafting.mc.commandframework;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -96,7 +96,7 @@ public class CommandFramework implements CommandExecutor {
 				Method method = commandMap.get(cmdLabel).getKey();
 				Object methodObject = commandMap.get(cmdLabel).getValue();
 				Command command = method.getAnnotation(Command.class);
-				if (command.permission() != null && !command.permission().isEmpty() && !sender.hasPermission(command.permission())) {
+				if (!command.permission().isEmpty() && !sender.hasPermission(command.permission())) {
 					if(!command.noPerm().equals("You do not have permission to perform that action") || this.noPermMessage == null){
 						sender.sendMessage(command.noPerm());
 						return true;
@@ -195,7 +195,7 @@ public class CommandFramework implements CommandExecutor {
 	public void registerCommand(Command command, String label, Method m, Object obj) {
 		commandMap.put(label.toLowerCase(), new AbstractMap.SimpleEntry<Method, Object>(m, obj));
 		commandMap.put(this.plugin.getName() + ':' + label.toLowerCase(), new AbstractMap.SimpleEntry<Method, Object>(m, obj));
-		String cmdLabel = label.replace(".", ",").split(",")[0].toLowerCase();
+		String cmdLabel = label.split("\\.")[0].toLowerCase();
 		if (map.getCommand(cmdLabel) == null) {
 			org.bukkit.command.Command cmd = new BukkitCommand(cmdLabel, this, plugin);
 			map.register(plugin.getName(), cmd);

@@ -1,4 +1,4 @@
-package de.pro_crafting.commandframework;
+package com.pro_crafting.mc.commandframework;
 
 import java.util.List;
 
@@ -26,8 +26,9 @@ public class BukkitCommand extends org.bukkit.command.Command {
 	/**
 	 * A slimmed down PluginCommand
 	 * 
-	 * @param name
-	 * @param owner
+	 * @param label something like command.subcommand
+	 * @param executor
+	 * @param owner the plugin that registered this command
 	 */
 	protected BukkitCommand(String label, CommandExecutor executor, Plugin owner) {
 		super(label);

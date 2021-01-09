@@ -1,4 +1,4 @@
-package de.pro_crafting.commandframework;
+package com.pro_crafting.mc.commandframework;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -40,7 +40,7 @@ public class CommandArgs {
 	/**
 	 * Gets the command sender
 	 * 
-	 * @return
+	 * @return the sender of the command, never null
 	 */
 	public CommandSender getSender() {
 		return sender;
@@ -49,7 +49,7 @@ public class CommandArgs {
 	/**
 	 * Gets the original command object
 	 * 
-	 * @return
+	 * @return the orignal command, never null
 	 */
 	public org.bukkit.command.Command getCommand() {
 		return command;
@@ -69,7 +69,7 @@ public class CommandArgs {
 	 * label was test.subcommand and the arguments were subcommand foo foo, it
 	 * would only return 'foo foo' because 'subcommand' is part of the command
 	 * 
-	 * @return
+	 * @return the arguments, may be empty
 	 */
 	public String[] getArgs() {
 		return args;
