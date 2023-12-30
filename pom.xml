@@ -8,13 +8,13 @@
 
 	<groupId>com.pro-crafting.mc</groupId>
 	<artifactId>commandframework</artifactId>
-	<version>0.2.2-SNAPSHOT</version>
+	<version>0.3.0</version>
 
 	<scm>
 		<connection>scm:git@github.com:pro-crafting/CommandFramework.git</connection>
 		<url>https://github.com/pro-crafting/CommandFramework</url>
 		<developerConnection>scm:git:git@github.com:pro-crafting/CommandFramework.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>commandframework-0.3.0</tag>
 	</scm>
 
 	<properties>
