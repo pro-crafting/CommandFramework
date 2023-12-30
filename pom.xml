@@ -21,6 +21,13 @@
 		<version.spigot-api>1.14.4-R0.1-SNAPSHOT</version.spigot-api>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>spigot-repo</id>
+			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+		</repository>
+	</repositories>
+
 	<build>
 		<plugins>
 			<plugin>
