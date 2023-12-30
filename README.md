@@ -1,3 +1,7 @@
+[![Version](https://img.shields.io/maven-central/v/com.pro-crafting.mc/commandframework?logo=apache-maven&style=for-the-badge)](https://search.maven.org/artifact/com.pro-crafting.mc/commandframework)
+[![GitHub Actions Status](<https://img.shields.io/github/actions/workflow/status/pro-crafting/CommandFramework/build.yml?branch=main&logo=GitHub&style=for-the-badge>)](https://github.com/pro-crafting/Common/actions/workflows/build.yml)
+
+
 I created a very lightweight annotation based command system that works similar to Bukkit's events system. It removes the necessity to add the command to your plugin.yml but will still allow you to set descriptions and usages through code.
 
 
