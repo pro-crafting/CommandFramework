@@ -1,8 +1,8 @@
 package com.pro_crafting.mc.commandframework;
 
+import java.util.Collections;
 import java.util.List;
 
-import org.apache.commons.lang.Validate;
 import org.bukkit.command.CommandException;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -68,9 +68,9 @@ public class BukkitCommand extends org.bukkit.command.Command {
 	@Override
 	public java.util.List<String> tabComplete(CommandSender sender, String alias, String[] args)
 			throws CommandException, IllegalArgumentException {
-		Validate.notNull(sender, "Sender cannot be null");
-		Validate.notNull(args, "Arguments cannot be null");
-		Validate.notNull(alias, "Alias cannot be null");
+		if (sender == null || args == null || alias == null) {
+			return Collections.emptyList();
+		}
 
 		List<String> completions = null;
 		try {
